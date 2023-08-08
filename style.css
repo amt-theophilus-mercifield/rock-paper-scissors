@@ -88,17 +88,19 @@ body {
 
 #score-title {
     color: #2A45C2;
-    font-size: 10px;
+    font-family: Barlow Semi Condensed;
+    font-size: 16px;
+    font-style: normal;
     font-weight: 600;
     line-height: normal;
-    letter-spacing: 1.563px;
+    letter-spacing: 2.5px;
 }
 
 #score-value {
     color: #565468;
     font-size: 40px;
     font-weight: 700;
-    line-height: 40px; /* 100% */
+    line-height: 40px;
 }
 
 .main-section {
@@ -114,6 +116,7 @@ body {
 
     position: relative;
     /* background: #F3F3F3; */
+    overflow: visible;
     
     
 }
@@ -128,21 +131,42 @@ body {
     
     stroke-width: 15px;
     stroke: #000;
-    opacity: 0.20000000298023224;
+    /* opacity: 0.20000000298023224; */
 }
 
 .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
+   
+    width:252px; 
+    height: 248px;
+
+    /* width: 730px;
+    height: 718px; */
+}
+
+.icon-container:hover {
+    background: url("./extra/Oval-on-hover.svg");
+    /* background: url("./extra/selected-overlay.svg"); */
+    background-position: center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    /* overflow: visible; */
+    z-index: 2;
 }
 
 .paper {
-    left: 120px;
-    top: 0;
+    /* width: 298px;
+    height: 303px; */
+    left: 90px;
+    top: -50px;
 }
 
 .scissors {
-    right: 120px;
-    top: 0;
+    right: 90px;
+    top: -50px;
 }
 
 .rock {
@@ -181,6 +205,11 @@ body {
 
 }
 
+#rules-button:hover {
+    background: #FFF;
+    color: #3B4262;
+}
+
 @media (max-width: 768px) {
     .main-container {
         width: 311px;
@@ -203,6 +232,7 @@ body {
     #logo {
         width: 83px;
         height: 48px;
+        place-self: center;
     }
 
     #score-container {
@@ -210,8 +240,23 @@ body {
         height: 72px;
     }
 
-    .main-section {
+    #score-value {
+        color: #565468;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 40px; /* 100% */
+    }
 
+    #score-title {
+        text-align: center;
+        font-size: 10px;
+        line-height: normal;
+        letter-spacing: 1.563px;
+    }
+
+    .main-section {
+        
     }
 
     #bg-triangle {
@@ -221,8 +266,9 @@ body {
     }
 
     .icon-container {
-        /* width: 130px;
-        height: 133px; */
+        width: 136px;
+        height: 136px;
+
     }
 
     .paper {
