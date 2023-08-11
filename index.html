@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Score
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <!-- Score
   Rules
 
   You Picked
@@ -23,55 +32,69 @@
   You Lose
 
   Play Again -->
-
-
-</head>
-<body>
-  <div class="parent">
-    <div class="main-container">
-      <div class="header">
-        <div class="header-container">
-          <div id="logo">
-            <img src="./images/logo.svg" alt="logo">
-          </div>
-          <div id="score-container">
-            <div id="score-title">score</div>
-            <div id="score-value">0</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="main-section">
-        <div id="bg-triangle">
-          <img src="images/bg-triangle.svg" alt="bg-triangle"/>
-        </div>
-
-        <div class="paper icon-container">
-          <div id="paper">
-            <img src="./extra/desktop-full-paper.svg" alt="paper">
+  </head>
+  <body>
+    <div class="parent">
+      <div class="main-container">
+        <div class="header">
+          <div class="header-container">
+            <div id="logo">
+              <img src="./images/logo.svg" alt="logo" />
+            </div>
+            <div id="score-container">
+              <div id="score-title">score</div>
+              <div id="score-value">0</div>
+            </div>
           </div>
         </div>
 
-        <div class="scissors icon-container">
-          <div id="scissors">
-            <img src="./extra/desktop-full-scissors.svg" alt="scissors">
+        <div class="main-section">
+          <div id="bg-triangle">
+            <img src="images/bg-triangle.svg" alt="bg-triangle" />
+          </div>
+
+          <div class="paper icon-container">
+            <div id="paper">
+              <img src="./extra/desktop-full-paper.svg" alt="paper" />
+            </div>
+          </div>
+
+          <div class="scissors icon-container">
+            <div id="scissors">
+              <img src="./extra/desktop-full-scissors.svg" alt="scissors" />
+            </div>
+          </div>
+
+          <div class="rock icon-container">
+            <div id="rock">
+              <img src="./extra/desktop-full-rock.svg" alt="rock" />
+            </div>
           </div>
         </div>
 
-        <div class="rock icon-container">
-          <div id="rock">
-            <img src="./extra/desktop-full-rock.svg" alt="rock">
+        <div class="footer">
+          <button id="rules-button">rules</button>
+        </div>
+        <div id="rules-modal-background" class="modal hidden"></div>
+        <div id="rules-modal-container" class="modal hidden">
+          <div id="modal">
+            <div id="modal-header">
+              <p>RULES</p>
+              <div id="close-btn">
+                <img src="/extra/close-x.svg" alt="close-x" />
+              </div>
+            </div>
+            <div id="modal-content">
+              <div id="modal-content-image">
+                <img
+                  src="/extra/desktop-rules-modal.svg"
+                  alt="desktop-rules-modal"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="footer">
-        <button id="rules-button">rules</button>
       </div>
     </div>
-  </div>
-
-
-  
-</body>
+  </body>
 </html>
