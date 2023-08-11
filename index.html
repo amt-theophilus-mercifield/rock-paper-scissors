@@ -49,32 +49,59 @@
         </div>
 
         <div class="main-section">
-          <div id="bg-triangle">
-            <img src="images/bg-triangle.svg" alt="bg-triangle" />
-          </div>
+          <!-- Step One -->
+          <div id="step-one">
+            <div id="bg-triangle" class="step-one">
+              <img src="images/bg-triangle.svg" alt="bg-triangle" />
+            </div>
 
-          <div class="paper icon-container">
-            <div id="paper">
-              <img src="./extra/desktop-full-paper.svg" alt="paper" />
+            <div class="paper icon-container">
+              <div id="paper">
+                <img src="./extra/desktop-full-paper.svg" alt="paper" />
+              </div>
+            </div>
+
+            <div class="scissors icon-container">
+              <div id="scissors">
+                <img src="./extra/desktop-full-scissors.svg" alt="scissors" />
+              </div>
+            </div>
+
+            <div class="rock icon-container">
+              <div id="rock">
+                <img src="./extra/desktop-full-rock.svg" alt="rock" />
+              </div>
             </div>
           </div>
 
-          <div class="scissors icon-container">
-            <div id="scissors">
-              <img src="./extra/desktop-full-scissors.svg" alt="scissors" />
+          <!-- Step Two -->
+          <div class="step-two">
+            <div class="left side-container">
+              <div class="two-title">
+                <p id="title-text">YOU PICKED</p>
+              </div>
+              <div class="two-icon-container">
+                <img class="step-two-choice" src="/extra/desktop-full-scissors.svg" alt="step-your-choice">
+              </div>
+            </div>
+            <div class="right side-container">
+              <div class="two-title">
+                <p id="title-text">THE HOUSE PICKED</p>
+              </div>
+              <div class="two-icon-container">
+                <!-- <img src="/extra/pre-house-icon.svg" alt="step-two-scissors"> -->
+                <img class="step-two-choice" src="/extra/desktop-full-rock.svg" alt="computers-choice">
+              </div>
             </div>
           </div>
 
-          <div class="rock icon-container">
-            <div id="rock">
-              <img src="./extra/desktop-full-rock.svg" alt="rock" />
-            </div>
+          <div class="footer">
+            <button id="rules-button">rules</button>
           </div>
         </div>
 
-        <div class="footer">
-          <button id="rules-button">rules</button>
-        </div>
+        <!-- Modal Component -->
+
         <div id="rules-modal-background" class="modal hidden"></div>
         <div id="rules-modal-container" class="modal hidden">
           <div id="modal">

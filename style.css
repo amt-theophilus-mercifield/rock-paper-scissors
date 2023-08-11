@@ -261,6 +261,38 @@ body {
     display: none;
 }
 
+#step-one {
+    display: none;
+}
+
+.step-two {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.side-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+.two-icon-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-two-choice {
+    width: 292.611px;
+    height: 286.699px;
+}
+
 @media (max-width: 768px) {
     .main-container {
         width: 311px;
@@ -271,7 +303,6 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         width: 311px;
         height: 96px;
     }
