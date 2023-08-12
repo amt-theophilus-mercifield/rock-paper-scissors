@@ -51,53 +51,110 @@
         <div class="main-section">
           <!-- Step One -->
           <div id="step-one">
-            <div id="bg-triangle" class="step-one">
-              <img src="images/bg-triangle.svg" alt="bg-triangle" />
-            </div>
+            <div class="triangle">
+              <div id="bg-triangle">
+                <img src="images/bg-triangle.svg" alt="bg-triangle" />
+              </div>
 
-            <div class="paper icon-container">
-              <div id="paper">
-                <img src="./extra/desktop-full-paper.svg" alt="paper" />
+              <div class="paper icon-container">
+                <div id="paper">
+                  <img src="./extra/desktop-full-paper.svg" alt="paper" />
+                </div>
+              </div>
+
+              <div class="scissors icon-container">
+                <div id="scissors">
+                  <img src="./extra/desktop-full-scissors.svg" alt="scissors" />
+                </div>
+              </div>
+
+              <div class="rock icon-container">
+                <div id="rock">
+                  <img src="./extra/desktop-full-rock.svg" alt="rock" />
+                </div>
               </div>
             </div>
+            <!-- triangle end -->
+          </div>
 
-            <div class="scissors icon-container">
-              <div id="scissors">
-                <img src="./extra/desktop-full-scissors.svg" alt="scissors" />
+          <!-- Step Two -->
+          <div id="step-two">
+            <div class="step-two-container">
+              <div class="left side-container">
+                <div class="two-title">
+                  <p id="title-text">YOU PICKED</p>
+                </div>
+                <div class="two-icon-container">
+                  <img
+                    class="step-two-choice"
+                    src="/extra/desktop-full-scissors.svg"
+                    alt="step-your-choice"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div class="rock icon-container">
-              <div id="rock">
-                <img src="./extra/desktop-full-rock.svg" alt="rock" />
+              <div class="right side-container">
+                <div class="two-title">
+                  <p id="title-text">THE HOUSE PICKED</p>
+                </div>
+                <div class="two-icon-container">
+                  <!-- <img src="/extra/pre-house-icon.svg" alt="step-two-scissors"> -->
+                  <img
+                    class="step-two-choice"
+                    src="/extra/desktop-full-rock.svg"
+                    alt="computers-choice"
+                  />
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Step Two -->
-          <div class="step-two">
-            <div class="left side-container">
-              <div class="two-title">
-                <p id="title-text">YOU PICKED</p>
-              </div>
-              <div class="two-icon-container">
-                <img class="step-two-choice" src="/extra/desktop-full-scissors.svg" alt="step-your-choice">
+          <!-- Step Three -->
+          <div id="step-three">
+            <div class="step-three-container">
+              <div class="left side-container">
+                <div class="two-title">
+                  <p id="title-text">YOU PICKED</p>
+                </div>
+                <div class="two-icon-container">
+                  <img
+                    class="step-two-choice"
+                    src="/extra/desktop-full-scissors.svg"
+                    alt="step-your-choice"
+                  />
+                </div>
               </div>
             </div>
+
+            <!--  -->
+            <div class="middle">
+              <div class="middle-text">
+                <p id="win">YOU WIN</p>
+                <p id="lose" style="display: none">YOU LOSE</p>
+              </div>
+              <div class="middle-button">
+                <button>PLAY AGAIN</button>
+              </div>
+            </div>
+            <!--  -->
             <div class="right side-container">
               <div class="two-title">
                 <p id="title-text">THE HOUSE PICKED</p>
               </div>
               <div class="two-icon-container">
                 <!-- <img src="/extra/pre-house-icon.svg" alt="step-two-scissors"> -->
-                <img class="step-two-choice" src="/extra/desktop-full-rock.svg" alt="computers-choice">
+                <img
+                  class="step-two-choice"
+                  src="/extra/desktop-full-rock.svg"
+                  alt="computers-choice"
+                />
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="footer">
-            <button id="rules-button">rules</button>
-          </div>
+        <div class="footer">
+          <button id="rules-button">rules</button>
         </div>
 
         <!-- Modal Component -->
@@ -108,7 +165,21 @@
             <div id="modal-header">
               <p>RULES</p>
               <div id="close-btn">
-                <img src="/extra/close-x.svg" alt="close-x" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    opacity="0.25"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.0919 2.12132L16.9706 0L9.54594 7.42462L2.12132 0L0 2.12132L7.42462 9.54594L0 16.9706L2.12132 19.0919L9.54594 11.6673L16.9706 19.0919L19.0919 16.9706L11.6673 9.54594L19.0919 2.12132Z"
+                    fill="#3B4262"
+                  />
+                </svg>
               </div>
             </div>
             <div id="modal-content">
@@ -123,5 +194,6 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript" src="./logic/index.js"></script>
   </body>
 </html>

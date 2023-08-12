@@ -13,6 +13,9 @@ body {
 }
 
 .parent {
+    display: flex;
+    justify-content: center;
+    align-self: center;
     height: 100vh;
     width: 100vw;
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)); 
@@ -25,10 +28,9 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* padding-top: 48px;
-    padding-bottom: 76px; */
 
-    max-width: 700px;
+    width: 52%;
+    min-width: 700px;
     height: 100%;
 
     margin: 0 auto;
@@ -42,13 +44,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    /* border: solid 3px #fff;
-    border-radius: 5px;
-    margin: 0 auto;
-    padding: 10px 30px;
-    width: 100%; */
-
-    width: 700px;
+    width: 100%;
     height: 150px;
     flex-shrink: 0;
 
@@ -111,13 +107,20 @@ body {
     width: 100%;
     height: 420px;
 
-    /* width: 270px;
-    height: 302px; */
-
     position: relative;
-    /* background: #F3F3F3; */
     overflow: visible;
-    
+}
+
+.triangle {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 700px;
+
+    /* background: #00000043; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -148,6 +151,7 @@ body {
 }
 
 .icon-container:hover {
+    cursor: pointer;
     background: url("./extra/Oval-on-hover.svg");
     /* background: url("./extra/selected-overlay.svg"); */
     background-position: center;
@@ -158,20 +162,19 @@ body {
 }
 
 .paper {
-    /* width: 298px;
-    height: 303px; */
     left: 90px;
-    top: -50px;
+    top: -40px;
 }
 
 .scissors {
     right: 90px;
-    top: -50px;
+    top: -40px;
 }
 
 .rock {
-    bottom: 0;
+    bottom: -40px;
 }
+
 
 .footer {
     display: flex;
@@ -185,8 +188,6 @@ body {
 
 #rules-button {
     text-transform: uppercase;
-    /* padding: 10px 30px;
-    border-radius: 5px; */
 
     width: 128px;
     height: 40px;
@@ -198,14 +199,13 @@ body {
     text-align: center;
     font-family: Barlow Semi Condensed;
     font-size: 16px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
     letter-spacing: 2.5px;
 
 }
 
 #rules-button:hover {
+    cursor: pointer;
     background: #FFF;
     color: #3B4262;
     transition: .5s;
@@ -257,19 +257,37 @@ body {
     place-self: center;
 }
 
+#close-btn:hover {
+    cursor: pointer;
+}
+
+#close-btn:hover svg path {
+    fill: #DB2E4D;
+    opacity: 1;
+}
+
+/* Modal Switch*/
 .hidden {
     display: none;
 }
 
-#step-one {
-    display: none;
-}
+
 
 .step-two {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 100%;
+}
+
+.step-two-container{
+    display: flex;
+    width: 700px;
+    height: 100%;
+
+    position: absolute;
+    top: 0; right: 0; bottom: 0; right: 0;
+    /* background: #00000042; */
 }
 
 .side-container {
@@ -293,17 +311,112 @@ body {
     height: 286.699px;
 }
 
+#step-three {
+    display: flex;
+    /* width: 100%; */
+    height: 100%;
+    gap: 20px;
+}
+
+.step-three-container {
+    display: flex;
+       
+
+    position: absolute;
+    top: 0; right: 0; bottom: 0; right: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background: #00000042;
+}
+
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: center;
+    height: 131px;
+    width: 100%;
+}
+
+.middle-text {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.20);
+    font-family: Barlow Semi Condensed;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.middle-button button {
+    color: #3B4262;
+    font-family: Barlow Semi Condensed;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFF 100%);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.20);
+}
+
+.middle-button button:hover {
+    cursor: pointer;
+    color: #DB2E4D;
+}
+
+.try {
+    width: 730px;
+    height: 718px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: radial-gradient(
+        rgba(210, 210, 210, 0.25) 40%,
+        rgba(210, 210, 210, 0.15) 40%,
+        rgba(210, 210, 210, 0.15) 55%,
+        rgba(210, 210, 210, 0.05) 55%
+    );
+
+    /* opacity: 0.5; */
+}
+
+/* Hide and Display Steps */
+
+#step-one {
+    display: none;
+}
+
+#step-two {
+    display: none;
+}
+
+#step-three {
+    /* display: none; */
+}
+
+
+
 @media (max-width: 768px) {
     .main-container {
-        width: 311px;
-        /* background: red; */
+        
+        width: 52%;
+        min-width: 311px;
+        height: 100%;
     }
 
     .header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 311px;
+        width: 100%;
         height: 96px;
     }
 
@@ -340,6 +453,12 @@ body {
     /* .main-section {
         
     } */
+
+
+    .triangle {
+        width: 311px;
+        margin: auto;
+    }
 
     #bg-triangle {
         content: url("./extra/mobile-bg-triangle.svg");
