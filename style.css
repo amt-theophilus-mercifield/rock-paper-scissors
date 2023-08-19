@@ -34,10 +34,7 @@ body {
     min-width: 700px;
     height: 100%;
 
-    margin: 0 auto;
-    /* background: hsla(254, 254, 254, 0.5); */
-    /* background: lightgray; */
-    
+    margin: 0 auto;  
 }
 
 .header {
@@ -80,7 +77,6 @@ body {
 
     width: 150px;
     height: 114px;
-    flex-shrink: 0;
 }
 
 #score-title {
@@ -144,11 +140,8 @@ body {
     align-items: center;
     position: absolute;
    
-    width:252px; 
+    width: 252px; 
     height: 248px;
-
-    /* width: 730px;
-    height: 718px; */
 }
 
 .icon-container:hover {
@@ -202,7 +195,6 @@ body {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 2.5px;
-
 }
 
 #rules-button:hover {
@@ -233,6 +225,7 @@ body {
     position: absolute;
 }
 
+/* Modal Component */
 
 #modal {
     display: flex;
@@ -340,6 +333,7 @@ body {
     position: absolute;
     overflow: hidden;
 }
+
 
 .side-container.win {
     
@@ -480,7 +474,6 @@ body {
     .icon-container {
         width: 136px;
         height: 136px;
-
     }
 
     .paper {
@@ -496,7 +489,7 @@ body {
     }
 
     .rock {
-        content: url("extra/rock-full-rock.svg");
+        content: url("extra/mobile-full-rock.svg");
         bottom: 67px;
     }
 
@@ -544,17 +537,37 @@ body {
         display: flex;
         justify-content: center;
     }
+
+/* Steps 2 an 3 */
+
+    #step-three {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #side-container {
+        display: grid;
+        position: relative;
+    }
+
+    #player-choice {
+        content: url("extra/mobile-full-rock.svg");      
+    }
+
+    #computer-choice {
+        content: url("extra/mobile-full-scissors.svg");
+    }  
    
 }
 
 /* Hide and Display Steps */
 
 #step-one {
-    display: none;
+    /* display: none; */
 }
 
 #step-two {
-    display: none;
+    /* display: none; */
 }
 
 #step-three {

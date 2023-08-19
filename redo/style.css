@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: Barlow Semi Condensed;
+  text-align: center;
+  line-height: normal;
+  font-style: normal;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  position: relative;
+  overflow: hidden;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 52%;
+  min-width: 311px;
+  height: 100%;
+}
+
+.score-panel {
+  width: 100%;
+  height: 96px;
+  border-radius: 5px;
+  border: 3px solid rgba(255, 255, 255, 0.29);
+}
+.score-panel .score-panel-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+}
+.score-panel .score-panel-container #logo {
+  width: 83px;
+  height: 48px;
+  place-self: center;
+}
+.score-panel .score-panel-container #logo img {
+  content: url("../extra/mobile-logo.svg");
+}
+.score-panel .score-panel-container #score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 8px;
+  background: linear-gradient(0deg, #F3F3F3 0%, #FFF 100%);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  width: 80px;
+  height: 72px;
+}
+.score-panel .score-panel-container #score-container #score-value {
+  color: #565468;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px; /* 100% */
+}
+.score-panel .score-panel-container #score-container #score-title {
+  color: #2A45C2;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 1.563px;
+}
+
+.game-area {
+  width: 100%;
+}
+
+#step-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-one-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 188px;
+}
+
+.choice {
+  position: absolute;
+  width: 136px;
+  height: 136px;
+}
+
+.choice.one {
+  top: -50px;
+  right: 100px;
+}
+
+.choice.two {
+  top: -50px;
+  left: 100px;
+}
+
+.choice.three {
+  bottom: -50px;
+}
+
+.rules.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 32px;
+  bottom: 32px;
+}
+
+#rules-button {
+  text-transform: uppercase;
+  width: 128px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #FFF;
+  background: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Barlow Semi Condensed;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+/* Modal Component */
+#modal {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-header {
+  color: #3B4262;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+#modal-header p {
+  color: #3B4262;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+#close-btn {
+  display: grid;
+  place-self: center;
+}
+
+#close-btn:hover {
+  cursor: pointer;
+}
+
+#close-btn:hover svg path {
+  fill: #DB2E4D;
+  opacity: 1;
+}
+
+/* Modal Switch*/
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
