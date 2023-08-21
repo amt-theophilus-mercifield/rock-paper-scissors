@@ -1,3 +1,4 @@
+/* Media Queries  Not necessarily correct, edit these at will */
 * {
   padding: 0;
   margin: 0;
@@ -27,11 +28,16 @@ body {
 .parent {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   width: 52%;
   min-width: 311px;
   height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .parent {
+    min-width: 700px;
+  }
 }
 
 .score-panel {
@@ -61,7 +67,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 8px;
-  background: linear-gradient(0deg, #F3F3F3 0%, #FFF 100%);
+  background: linear-gradient(0deg, #f3f3f3 0%, #fff 100%);
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
   width: 80px;
   height: 72px;
@@ -73,10 +79,38 @@ body {
   line-height: 40px; /* 100% */
 }
 .score-panel .score-panel-container #score-container #score-title {
-  color: #2A45C2;
+  color: #2a45c2;
   font-size: 10px;
   line-height: normal;
   letter-spacing: 1.563px;
+}
+@media only screen and (min-width: 768px) {
+  .score-panel {
+    height: 150px;
+    border-radius: 15px;
+  }
+  .score-panel .score-panel-container {
+    padding: 0 24px;
+  }
+  .score-panel .score-panel-container #logo {
+    width: 162px;
+    height: 99px;
+  }
+  .score-panel .score-panel-container #logo img {
+    content: url("../images/logo.svg");
+  }
+  .score-panel .score-panel-container #score-container {
+    width: 150px;
+    height: 114px;
+  }
+  .score-panel .score-panel-container #score-container #score-title {
+    font-size: 16px;
+    letter-spacing: 2.5px;
+  }
+  .score-panel .score-panel-container #score-container #score-value {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .game-area {
@@ -97,25 +131,249 @@ body {
   width: 166px;
   height: 188px;
 }
+@media only screen and (min-width: 768px) {
+  .step-one-container {
+    width: 254px;
+    height: 287px;
+  }
+  .step-one-container #bg-triangle {
+    content: url("../images/bg-triangle.svg");
+  }
+}
 
 .choice {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 136px;
   height: 136px;
+}
+@media only screen and (min-width: 768px) {
+  .choice {
+    width: 252px;
+    height: 248px;
+  }
+  .choice #choice-one img {
+    width: 198px;
+    height: 203px;
+  }
+}
+
+.choice:hover {
+  background: rgba(210, 210, 210, 0.06);
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  #choice-one img {
+    content: url("../extra/desktop-full-paper.svg");
+  }
 }
 
 .choice.one {
   top: -50px;
   right: 100px;
 }
+@media only screen and (min-width: 768px) {
+  .choice.one {
+    top: -100px;
+    right: 135px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #choice-two img {
+    content: url("../extra/desktop-full-scissors.svg");
+  }
+}
 
 .choice.two {
   top: -50px;
   left: 100px;
 }
+@media only screen and (min-width: 768px) {
+  .choice.two {
+    top: -100px;
+    left: 135px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #choice-three img {
+    content: url("../extra/desktop-full-rock.svg");
+  }
+}
 
 .choice.three {
   bottom: -50px;
+}
+@media only screen and (min-width: 768px) {
+  .choice.three {
+    bottom: -90px;
+  }
+}
+
+#step-two {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  #step-two {
+    justify-content: normal;
+  }
+}
+
+.step-two-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.step-two-container .selection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+@media only screen and (min-width: 768px) {
+  .step-two-container .selection {
+    align-items: flex-start;
+  }
+}
+.step-two-container .player.selection {
+  width: 50%;
+  height: 180px;
+}
+.step-two-container .player.selection #player-selection {
+  display: flex;
+}
+.step-two-container .player.selection #player-selection .you.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 288px;
+  height: 288px;
+  position: absolute;
+  top: -75px;
+  left: -75px;
+}
+@media only screen and (min-width: 768px) {
+  .step-two-container .player.selection #player-selection .you.icon-wrapper {
+    width: 730px;
+    height: 730px;
+    top: -120px;
+    left: -320px;
+  }
+  .step-two-container .player.selection #player-selection .you.icon-wrapper img {
+    content: url("../extra/desktop-full-rock.svg");
+    width: 293px;
+  }
+}
+.step-two-container .player.selection #player-selection .win {
+  background: radial-gradient(rgba(210, 210, 210, 0.12) 40%, rgba(210, 210, 210, 0.07) 40%, rgba(210, 210, 210, 0.07) 55%, rgba(210, 210, 210, 0.02) 55%);
+  border-radius: 50%;
+}
+.step-two-container .player.selection #player-selection .player-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 143px;
+  height: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .step-two-container .player.selection #player-selection .player-title {
+    z-index: 4;
+  }
+}
+.step-two-container .computer.selection {
+  width: 50%;
+  height: 180px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+@media only screen and (min-width: 768px) {
+  .step-two-container .computer.selection {
+    align-items: flex-start;
+  }
+}
+.step-two-container .computer.selection #computer-selection {
+  display: flex;
+}
+.step-two-container .computer.selection #computer-selection .house.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 288px;
+  height: 288px;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+}
+@media only screen and (min-width: 768px) {
+  .step-two-container .computer.selection #computer-selection .house.icon-wrapper {
+    width: 730px;
+    height: 730px;
+    top: -120px;
+    right: -320px;
+  }
+  .step-two-container .computer.selection #computer-selection .house.icon-wrapper img {
+    content: url("../extra/desktop-full-scissors.svg");
+    width: 293px;
+  }
+}
+.step-two-container .computer.selection #computer-selection .win {
+  background: radial-gradient(rgba(210, 210, 210, 0.12) 40%, rgba(210, 210, 210, 0.07) 40%, rgba(210, 210, 210, 0.07) 55%, rgba(210, 210, 210, 0.02) 55%);
+  border-radius: 50%;
+}
+.step-two-container .computer.selection #computer-selection .computer-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 32px;
+  background: rgba(59, 66, 98, 0.2705882353);
+}
+.step-two-container #player-selection,
+.step-two-container #computer-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.step-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 135px;
+}
+.step-three .status-container .status {
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  font-size: 56px;
+  font-weight: 700;
+}
+.step-three .play-again-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 48px;
+  border-radius: 8px;
+  background: linear-gradient(0deg, #F3F3F3 0%, #FFF 100%);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.step-three .play-again-button :hover {
+  cursor: pointer;
+  color: #DB2E4D;
+}
+.step-three .play-again-button p {
+  color: #3B4262;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
 }
 
 .rules.button {
@@ -125,15 +383,29 @@ body {
   right: 32px;
   bottom: 32px;
 }
+@media only screen and (min-width: 768px) {
+  .rules.button {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+  }
+}
+
+#rules-button:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #3b4262;
+  transition: 0.5s;
+}
 
 #rules-button {
   text-transform: uppercase;
   width: 128px;
   height: 40px;
   border-radius: 8px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   background: none;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Barlow Semi Condensed;
   font-size: 16px;
@@ -148,14 +420,14 @@ body {
 }
 
 #modal-header {
-  color: #3B4262;
+  color: #3b4262;
   display: flex;
   justify-content: space-between;
   padding: 32px;
 }
 
 #modal-header p {
-  color: #3B4262;
+  color: #3b4262;
   font-size: 32px;
   font-weight: 700;
   line-height: 32px;
@@ -171,11 +443,15 @@ body {
 }
 
 #close-btn:hover svg path {
-  fill: #DB2E4D;
+  fill: #db2e4d;
   opacity: 1;
 }
 
 /* Modal Switch*/
 .hidden {
+  display: none;
+}
+
+#step-one {
   display: none;
 }/*# sourceMappingURL=style.css.map */

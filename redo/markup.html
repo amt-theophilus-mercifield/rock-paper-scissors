@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
       rel="icon"
@@ -21,9 +21,8 @@
     <!-- <link rel="stylesheet" href="style.scss" /> -->
 
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="parent-container">
       <div class="parent">
         <div class="score-panel">
@@ -45,18 +44,55 @@
               </div>
               <div class="choice one">
                 <div id="choice-one">
-                  <img src="../extra/mobile-full-paper.svg" alt="paper">
+                  <img src="../extra/mobile-full-paper.svg" alt="paper" />
                 </div>
               </div>
               <div class="choice two">
                 <div id="choice-two">
-                  <img src="../extra/mobile-full-scissors.svg" alt="scissors">
+                  <img src="../extra/mobile-full-scissors.svg" alt="scissors" />
                 </div>
               </div>
               <div class="choice three">
                 <div id="choice-three">
-                  <img src="../extra/mobile-full-rock.svg" alt="rock">
+                  <img src="../extra/mobile-full-rock.svg" alt="rock" />
                 </div>
+              </div>
+            </div>
+          </div>
+          <div id="step-two">
+            <div class="step-two-container">
+              <div class="player selection">
+                <div id="player-selection">
+                  <div class="you icon-wrapper win">
+                    <img src="../extra/mobile-full-rock.svg" alt="rock" />
+                  </div>
+                  <div class="player-title">
+                    <p>YOU PICKED</p>
+                  </div>
+                </div>
+              </div>
+              <div class="computer selection">
+                <div id="computer-selection">
+                  <div class="house icon-wrapper">
+                    <img src="../extra/mobile-full-scissors.svg" alt="scissors" />
+                  </div>
+                  <div class="computer-title">
+                    <p>THE HOUSE PICKED</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step-three">
+              <div class="status-container">
+                <div class="status win">
+                  <p>YOU WIN</p>
+                </div>
+                <div class="status lose" style="display: none;">
+                  <p>YOU LOSE</p>
+                </div>
+              </div>
+              <div class="play-again-button">
+                <p>PLAY AGAIN</p>
               </div>
             </div>
           </div>
@@ -101,5 +137,5 @@
         </div>
       </div>
     </div>
-</body>
+  </body>
 </html>
