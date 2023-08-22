@@ -163,6 +163,7 @@ body {
 .choice:hover {
   background: rgba(210, 210, 210, 0.06);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -406,52 +407,106 @@ body {
   border: 1px solid #fff;
   background: none;
   color: #fff;
-  text-align: center;
-  font-family: Barlow Semi Condensed;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 2.5px;
 }
 
 /* Modal Component */
-#modal {
+#rules-modal-background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3137254902);
+}
+
+#rules-modal-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+@media only screen and (min-width: 768px) {
+  #rules-modal-container {
+    width: 400px;
+    height: 415px;
+  }
+}
+#rules-modal-container #modal {
   display: flex;
   flex-direction: column;
-}
-
-#modal-header {
-  color: #3b4262;
-  display: flex;
   justify-content: space-between;
-  padding: 32px;
+  height: 70%;
 }
-
-#modal-header p {
-  color: #3b4262;
+@media only screen and (min-width: 768px) {
+  #rules-modal-container #modal {
+    height: auto;
+  }
+}
+#rules-modal-container #modal #modal-header {
+  color: #3B4262;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  #rules-modal-container #modal #modal-header {
+    justify-content: center;
+    align-items: center;
+  }
+}
+#rules-modal-container #modal #modal-header p {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100px;
+  font-family: Barlow Semi Condensed;
   font-size: 32px;
   font-weight: 700;
   line-height: 32px;
 }
-
-#close-btn {
-  display: grid;
+@media only screen and (min-width: 768px) {
+  #rules-modal-container #modal #modal-header p {
+    color: #3B4262;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 32px;
+  }
+}
+#rules-modal-container #modal #modal-header #close-btn {
+  position: absolute;
+  width: 100%;
+  bottom: 66px;
   place-self: center;
 }
-
-#close-btn:hover {
+#rules-modal-container #modal #modal-header #close-btn :hover {
   cursor: pointer;
 }
-
-#close-btn:hover svg path {
-  fill: #db2e4d;
+#rules-modal-container #modal #modal-header #close-btn :hover svg path {
+  fill: #DB2E4D;
   opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  #rules-modal-container #modal #modal-header #close-btn {
+    position: static;
+    display: flex;
+    place-self: auto;
+    justify-content: flex-end;
+    padding-right: 32px;
+  }
 }
 
 /* Modal Switch*/
-.hidden {
+#step-two {
   display: none;
 }
 
-#step-one {
-  display: none;
+.step-three {
+  visibility: hidden;
 }/*# sourceMappingURL=style.css.map */
