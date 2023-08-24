@@ -509,7 +509,7 @@ body {
 
 /* Modal Component */
 
-#rules-modal-background {
+.rules-modal-background {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -597,7 +597,7 @@ body {
 
 /* Modal Switch*/
 .hidden {
-    // display: none;
+    display: none;
 }
 
 // Switch for Steps //
