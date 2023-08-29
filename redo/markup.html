@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.scss" /> -->
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="parent-container">
+      <div class="parent">
+        <div class="score-panel">
+          <div class="score-panel-container">
+            <div id="logo">
+              <img src="../images/logo.svg" alt="logo" />
+            </div>
+            <div id="score-container">
+              <div id="score-title">score</div>
+              <div id="score-value">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="game-area">
+          <div id="step-one">
+            <div class="step-one-container">
+              <div id="bg-triangle">
+                <img src="../extra/mobile-bg-triangle.svg" alt="bg-triangle" />
+              </div>
+              <div class="choice one" >
+                <div class="choice-one paper">
+                  <img src="../extra/mobile-full-paper.svg" alt="paper" id="paper" />
+                </div>
+              </div>
+              <div class="choice two" >
+                <div class="choice-two scissors">
+                  <img src="../extra/mobile-full-scissors.svg" alt="scissors" id="scissors" />
+                </div>
+              </div>
+              <div class="choice three">
+                <div class="choice-three rock">
+                  <img src="../extra/mobile-full-rock.svg" alt="rock" id="rock" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="step-two">
+            <div class="step-two-container">
+              <div class="player selection">
+                <div id="player-selection">
+                  <div class="you icon-wrapper win">
+                    <img src="../extra/mobile-full-rock.svg" alt="rock" />
+                  </div>
+                  <div class="player-title">
+                    <p>YOU PICKED</p>
+                  </div>
+                </div>
+              </div>
+              <div class="computer selection">
+                <div id="computer-selection">
+                  <div class="house icon-wrapper">
+                    <img
+                      src="../extra/mobile-full-scissors.svg"
+                      alt="scissors"
+                    />
+                  </div>
+                  <div class="computer-title">
+                    <p>THE HOUSE PICKED</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step-three">
+              <div class="status-container">
+                <div class="status win">
+                  <p>YOU WIN</p>
+                </div>
+                <div class="status lose" style="display: none">
+                  <p>YOU LOSE</p>
+                </div>
+              </div>
+              <div class="play-again-button">
+                <p>PLAY AGAIN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rules button">
+          <button id="rules-button" type="button">rules</button>
+        </div>
+
+        <!-- Modal Component -->
+        <div id="rules-modal-background" class="rules-modal-background hidden">
+          <div id="rules-modal-container" class="modal hidden">
+            <div id="modal">
+              <div id="modal-header">
+                <p>RULES</p>
+                <div id="close-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      opacity="0.25"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.0919 2.12132L16.9706 0L9.54594 7.42462L2.12132 0L0 2.12132L7.42462 9.54594L0 16.9706L2.12132 19.0919L9.54594 11.6673L16.9706 19.0919L19.0919 16.9706L11.6673 9.54594L19.0919 2.12132Z"
+                      fill="#3B4262"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div id="modal-content">
+                <div id="modal-content-image">
+                  <img
+                    src="../extra/desktop-rules-modal.svg"
+                    alt="desktop-rules-modal"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../logic/index.js"></script>
+  </body>
+</html>
