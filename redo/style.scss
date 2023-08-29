@@ -200,8 +200,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 252px;
-    // height: 248px;
     width: 136px;
     height: 136px;
 
@@ -209,7 +207,7 @@ body {
         width: 252px;
         height: 248px;
 
-        #choice-one img {
+        .choice-one img {
             width: 198px;
             height: 203px;
         }
@@ -222,7 +220,7 @@ body {
     cursor: pointer;
 }
 
-#choice-one {
+.choice-one {
     @media only screen and (min-width: 768px) {
         img {
             content: url("../extra/desktop-full-paper.svg");
@@ -238,7 +236,7 @@ body {
     }
 }
 
-#choice-two {
+.choice-two {
     @media only screen and (min-width: 768px) {
         img {
             content: url("../extra/desktop-full-scissors.svg");
@@ -254,7 +252,7 @@ body {
     }
 }
 
-#choice-three {
+.choice-three {
     @media only screen and (min-width: 768px) {
         img {
             content: url("../extra/desktop-full-rock.svg");
@@ -290,7 +288,7 @@ body {
     // display: grid;
     // grid-template-columns: 288px 288px;
     // height: 284px;
-    display: flex;
+    display: flex; 
     justify-content: flex-end;
     align-items: center;
     position: relative;
@@ -509,7 +507,7 @@ body {
 
 /* Modal Component */
 
-#rules-modal-background {
+.rules-modal-background {
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -597,7 +595,7 @@ body {
 
 /* Modal Switch*/
 .hidden {
-    // display: none;
+    display: none;
 }
 
 // Switch for Steps //

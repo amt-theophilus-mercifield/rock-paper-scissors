@@ -154,7 +154,7 @@ body {
     width: 252px;
     height: 248px;
   }
-  .choice #choice-one img {
+  .choice .choice-one img {
     width: 198px;
     height: 203px;
   }
@@ -167,7 +167,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  #choice-one img {
+  .choice-one img {
     content: url("../extra/desktop-full-paper.svg");
   }
 }
@@ -184,7 +184,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  #choice-two img {
+  .choice-two img {
     content: url("../extra/desktop-full-scissors.svg");
   }
 }
@@ -201,7 +201,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  #choice-three img {
+  .choice-three img {
     content: url("../extra/desktop-full-rock.svg");
   }
 }
@@ -413,7 +413,7 @@ body {
 }
 
 /* Modal Component */
-#rules-modal-background {
+.rules-modal-background {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -503,6 +503,10 @@ body {
 }
 
 /* Modal Switch*/
+.hidden {
+  display: none;
+}
+
 #step-two {
   display: none;
 }
