@@ -6,7 +6,8 @@ const closeBtn = document.getElementById("close-btn");
 const scoreValue = document.getElementById("score-value");
 const playAgain = document.querySelector(".play-again-button");
 
-// Choice Variables //
+
+// Choice Variables 
 const stepOne = document.getElementById("step-one");
 const stepTwo = document.getElementById("step-two");
 const stepTwoContainer = stepTwo.querySelector(".step-two-container");
