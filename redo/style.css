@@ -323,19 +323,20 @@ body {
     width: 293px;
   }
 }
-.step-two-container .computer.selection #computer-selection .win {
+.step-two-container .computer.selection .win {
   background: radial-gradient(rgba(210, 210, 210, 0.12) 40%, rgba(210, 210, 210, 0.07) 40%, rgba(210, 210, 210, 0.07) 55%, rgba(210, 210, 210, 0.02) 55%);
   border-radius: 50%;
 }
-.step-two-container .computer.selection #computer-selection .computer-title {
+.step-two-container .computer.selection .computer-title {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 130px;
   height: 32px;
 }
-.step-two-container #player-selection,
-.step-two-container #computer-selection {
+
+#player-selection,
+#computer-selection {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -528,4 +529,31 @@ body {
 
 .step-three {
   visibility: hidden;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateX(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.house {
+  animation: rotation 1s backwards;
+  animation-delay: 0.5s;
+}
+
+.status-container {
+  animation: fadeIn 3s;
 }/*# sourceMappingURL=style.css.map */

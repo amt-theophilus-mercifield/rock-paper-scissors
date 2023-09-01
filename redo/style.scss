@@ -352,28 +352,31 @@ body {
         #computer-selection {
             display: flex;
             .house.icon-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 288px;
-                height: 288px;
-                
-                position: absolute;
-                top: -75px;
-                right: -75px;
-                @media only screen and (min-width: 768px){
-                    width: 730px;
-                    height: 730px;
-                    top: -120px;
-                    right: -320px;
-                    img {
-                        // content: url("../extra/desktop-full-scissors.svg");
-                        width: 293px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 288px;
+                    height: 288px;
+                    
+                    position: absolute;
+                    top: -75px;
+                    right: -75px;
+                    @media only screen and (min-width: 768px){
+                        width: 730px;
+                        height: 730px;
+                        top: -120px;
+                        right: -320px;
+                        img {
+                            // content: url("../extra/desktop-full-scissors.svg");
+                            width: 293px;
+                        }
                     }
+    
+                    // background: #2a45c240;
                 }
-
-                // background: #2a45c240;
             }
+            
+            
             .win {
                 background: radial-gradient(
                     rgba(210, 210, 210, 0.120) 40%,
@@ -390,10 +393,6 @@ body {
 
                 width: 130px;
                 height: 32px;
-                
-                // position: static;
-                // right: 0px;
-                // bottom: 0px;
             }
         }
 
@@ -405,7 +404,7 @@ body {
         justify-content: space-evenly;
         // gap: 17px;
     }
-}
+
 
 // Step 3 //
 .step-three {
@@ -612,4 +611,34 @@ body {
 }
 .step-three {
     visibility: hidden;
+}
+
+// Animations //
+
+@keyframes rotation {
+    from {
+        transform: rotateX(0);
+        opacity: 0;
+    }
+    to {
+        transform: rotateX(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.house {
+    animation: rotation 1s backwards;
+    animation-delay: .5s;
+}
+
+.status-container {
+    animation: fadeIn 3s;
 }

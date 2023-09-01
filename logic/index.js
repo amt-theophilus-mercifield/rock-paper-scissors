@@ -22,6 +22,7 @@ const userIconWrapper = playerSelection.querySelector(".you.icon-wrapper");
 const computerIconWrapper = computerSelection.querySelector(
   ".house.icon-wrapper"
 );
+const house = computerSelection.querySelector("house");
 
 let score = 0;
 
@@ -108,6 +109,7 @@ function showResults(userChoice, computerChoice) {
 
       }
     }
+    // house.classList.add("fadeAnimate");
     return userWin;
   };
 
