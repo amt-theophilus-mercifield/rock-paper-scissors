@@ -4,7 +4,7 @@ const rulesModalBackground = document.getElementById("rules-modal-background");
 const closeBtn = document.getElementById("close-btn");
 
 const scoreValue = document.getElementById("score-value");
-const playAgain = document.querySelector(".play-again-button");
+const playAgain = document.getElementById("play-again-button");
 
 
 // Choice Variables 
@@ -65,9 +65,9 @@ function showResults(userChoice, computerChoice) {
   console.log(userChoice);
   console.log(computerChoice);
 
-  let paperHtml = "<img src='../extra/mobile-full-paper.svg' />";
-  let scissorsHtml = "<img src='../extra/mobile-full-scissors.svg' />";
-  let rockHtml = "<img src='../extra/mobile-full-rock.svg' />";
+  let paperHtml = "<img src='extra/mobile-full-paper.svg' />";
+  let scissorsHtml = "<img src='extra/mobile-full-scissors.svg' />";
+  let rockHtml = "<img src='extra/mobile-full-rock.svg' />";
   let userWin;
   
   // Set Icon For User and Computer //
@@ -142,8 +142,8 @@ function showResults(userChoice, computerChoice) {
 
 }
 
-playAgain.addEventListener('click', (e)=>{
-  // if (!e.target.closest("button")) return;
+playAgain.addEventListener('click', (e) => {
+  // if (!e.target.closest("div.play-again-button")) return;
   reset();
 })
 
