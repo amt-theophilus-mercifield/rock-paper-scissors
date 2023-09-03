@@ -24,7 +24,9 @@ const computerIconWrapper = computerSelection.querySelector(
 );
 const house = computerSelection.querySelector("house");
 
-let score = 0;
+let score = localStorage.gameScore;
+scoreValue.innerText = score.toString();
+
 
 /////////////////////////////////////////
 //////// Listener on Each Choice ////////
@@ -88,7 +90,7 @@ function showResults(userChoice, computerChoice) {
       userIconWrapper.innerHTML = scissorsHtml;
 
       if (computerChoice === "rock") {
-        computerIconWrapper.innerHTML = paperHtml;
+        computerIconWrapper.innerHTML = rockHtml;
         userWin = false;
 
       } else if (computerChoice === "paper") {
@@ -109,7 +111,7 @@ function showResults(userChoice, computerChoice) {
 
       }
     }
-    // house.classList.add("fadeAnimate");
+    
     return userWin;
   };
 
@@ -120,6 +122,7 @@ function showResults(userChoice, computerChoice) {
     userIconWrapper.classList.add("win");
     // let score;
     score++;
+    localStorage.setItem("gameScore", score);
     let newScore = score.toString();
     scoreValue.innerText = newScore;
   }
@@ -129,9 +132,11 @@ function showResults(userChoice, computerChoice) {
     computerIconWrapper.classList.add("win");
     //let score;
     score--;
+    localStorage.setItem("gameScore", score);
     let newScore = score.toString();
     scoreValue.innerText = newScore;
   }
+
 })();  
 
 
