@@ -24,12 +24,16 @@ const computerIconWrapper = computerSelection.querySelector(
 );
 const house = computerSelection.querySelector("house");
 
-let score = localStorage.gameScore;
-
-if (!localStorage.gameScore == undefined){
-  scoreValue.innerText = score.toString();  
+(() => {
+if (localStorage.length == 0){
+  return score = 0;
 }
+else {
+  return score = localStorage.gameScore;
+}
+})();
 
+  scoreValue.innerText = score.toString();
 
 
 /////////////////////////////////////////
@@ -125,20 +129,23 @@ function showResults(userChoice, computerChoice) {
     statusWin.style.display = "block";
     userIconWrapper.classList.add("win");
     // let score;
+    score = parseInt(score);
     score++;
-    localStorage.setItem("gameScore", score);
     let newScore = score.toString();
     scoreValue.innerText = newScore;
+    localStorage.setItem("gameScore", newScore);
   }
   else if (getUserWin() === false){
     console.log("Player lose!");
     statusLose.style.display = "block";
     computerIconWrapper.classList.add("win");
     //let score;
+    score = parseInt(score);
     score--;
-    localStorage.setItem("gameScore", score);
     let newScore = score.toString();
     scoreValue.innerText = newScore;
+
+    localStorage.setItem("gameScore", newScore);
   }
 
 })();  
