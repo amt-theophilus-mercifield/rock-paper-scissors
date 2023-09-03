@@ -25,7 +25,8 @@ const computerIconWrapper = computerSelection.querySelector(
 const house = computerSelection.querySelector("house");
 
 let score = localStorage.gameScore;
-scoreValue.innerText = score.toString();
+let newScore = score.toString();
+scoreValue.innerText = newScore;
 
 
 /////////////////////////////////////////
