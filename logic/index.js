@@ -6,7 +6,6 @@ const closeBtn = document.getElementById("close-btn");
 const scoreValue = document.getElementById("score-value");
 const playAgain = document.getElementById("play-again-button");
 
-
 // Choice Variables 
 const stepOne = document.getElementById("step-one");
 const stepTwo = document.getElementById("step-two");
@@ -19,9 +18,7 @@ const statusLose = stepThreeContainer.querySelector(".status.lose");
 const playerSelection = document.querySelector("#player-selection");
 const computerSelection = document.querySelector("#computer-selection");
 const userIconWrapper = playerSelection.querySelector(".you.icon-wrapper");
-const computerIconWrapper = computerSelection.querySelector(
-  ".house.icon-wrapper"
-);
+const computerIconWrapper = computerSelection.querySelector(".house.icon-wrapper");
 const house = computerSelection.querySelector("house");
 
 (() => {
@@ -72,8 +69,6 @@ function getComputerChoice(userChoice) {
 }
 
 function showResults(userChoice, computerChoice) {
-  console.log(userChoice);
-  console.log(computerChoice);
 
   let paperHtml = "<img src='extra/mobile-full-paper.svg' />";
   let scissorsHtml = "<img src='extra/mobile-full-scissors.svg' />";
@@ -125,7 +120,6 @@ function showResults(userChoice, computerChoice) {
 
 (()=> {
   if (getUserWin() === true){
-    console.log("User wins!");
     statusWin.style.display = "block";
     userIconWrapper.classList.add("win");
     // let score;
@@ -136,7 +130,6 @@ function showResults(userChoice, computerChoice) {
     localStorage.setItem("gameScore", newScore);
   }
   else if (getUserWin() === false){
-    console.log("Player lose!");
     statusLose.style.display = "block";
     computerIconWrapper.classList.add("win");
     //let score;
